@@ -2,6 +2,8 @@ window.Webflow ||= [];
 
 window.Webflow.push(() => {
   let seasonState = "season";
+  // init the season
+  handleSeason(seasonState);
 
   // place buttons on the map according to the CMS coordinates
 	document.querySelectorAll(".kwm-button").forEach(el => {
@@ -32,7 +34,6 @@ window.Webflow.push(() => {
     // console.log("name", name); 
     // show the name story
     document.querySelectorAll(".kwm-story").forEach(el => {
-      console.log("log the items: ", el);
       if(el.dataset.name === name) {
         el.style.display = "grid";
         el.style.opacity = "1";
